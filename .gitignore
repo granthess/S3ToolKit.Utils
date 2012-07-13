@@ -2,6 +2,10 @@
 bin
 obj
 
+# Visual Studio per-user config files
+*.user
+*.suo
+
 #NuGet packages, each developer should download these themselves
 packages
 

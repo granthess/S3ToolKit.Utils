@@ -6,8 +6,11 @@ obj
 *.user
 *.suo
 
-#NuGet packages, each developer should download these themselves
+# NuGet packages, each developer should download these themselves
 packages
+
+# SpecFlow generated feature.cs files
+*.feature.cs
 
 # mstest test results
 TestResults

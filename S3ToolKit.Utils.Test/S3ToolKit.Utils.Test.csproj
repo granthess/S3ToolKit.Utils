@@ -50,11 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logging\LoggingTests.cs" />
     <Compile Include="Test1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\S3ToolKit.Utils\S3ToolKit.Utils.csproj">
+      <Project>{071FF9D6-33A1-4C68-8D57-090C13AF4DCE}</Project>
+      <Name>S3ToolKit.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

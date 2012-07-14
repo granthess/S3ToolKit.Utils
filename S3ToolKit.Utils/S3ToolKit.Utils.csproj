@@ -43,8 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DuplicatePackageException.cs" />
+    <Compile Include="FileTools.cs" />
+    <Compile Include="FNV.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\LogManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecycleBin.cs" />
+    <Compile Include="Registry\InstallationInfo.cs" />
+    <Compile Include="Registry\InstalledGameEntry.cs" />
+    <Compile Include="Sims3\MathConstants.cs" />
+    <Compile Include="Sims3\MathUtils.cs" />
+    <Compile Include="Sims3\Matrix44.cs" />
+    <Compile Include="Sims3\Quaternion.cs" />
+    <Compile Include="Sims3\Vector2.cs" />
+    <Compile Include="Sims3\Vector3.cs" />
+    <Compile Include="Sims3\Vector4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

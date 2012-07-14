@@ -4,3 +4,10 @@ The library is licensed under the LGPL (Lesser GPL) and is a significant compone
 
 For more information on CC-Magic or to contact the author, please visit http://sims3.the-prof.net/forums/
 
+Misc: Possibly incorrectly located classes and exceptions.  
+
+Logging: provides a simple and robust application logging system -- potentially may switch to Log4Net at a later time, though that seems too complex for our needs.
+
+Registry: provides access to the standard Sims 3 registry entries for application discovery and locale validation.
+
+Sims3: provides versions of the math classes used by TS3.  

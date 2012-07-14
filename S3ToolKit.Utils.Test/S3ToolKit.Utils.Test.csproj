@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Logging\LoggingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registry\RegistryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

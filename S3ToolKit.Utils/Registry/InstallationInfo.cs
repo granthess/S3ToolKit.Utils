@@ -46,7 +46,7 @@ namespace S3ToolKit.Utils.Registry
         public string DocumentBaseDir { get; private set; }        
         public string Locale { get; private set; }
         public bool IsSteam { get; private set; }
-
+                
         private InstallationInfo()
         {
             log.Debug("InstallationInfo .ctor");
@@ -100,11 +100,16 @@ namespace S3ToolKit.Utils.Registry
             }
         }
 
-        private string InitBaseDir(string Locale)
+        public string InitBaseDir(string Locale)
         {
             log.Debug(string.Format("InitBaseDir Locale:{0}",Locale));
             // Information about Documents directory provided by Sakura4
             string Result = "The Sims 3";
+
+            // Issue #1, non standard upper/lower case issue
+            Locale = Locale.Substring(0, 2).ToLower() + "-" + Locale.Substring(3, 2).ToUpper();
+
+
             switch (Locale)
             {
                 case "en-US": Result = "The Sims 3"; break;

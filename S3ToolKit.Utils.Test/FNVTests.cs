@@ -33,7 +33,8 @@ namespace S3ToolKit.Utils.Test
         [Test]
         public void TestFNV64()
         {
-            UInt64 ExpectedResult = 0xFB1D3BAE83873E94;
+            UInt64 ExpectedResult = 0xFB1D3BAE83872E94;
+                                    
             string TestPhrase = "Test Phrase";
             UInt64 result = FNV.FNV64(TestPhrase);
             Assert.AreEqual(ExpectedResult , result);

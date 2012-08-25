@@ -22,19 +22,32 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using S3ToolKit.Utils;
+using S3ToolKit.Utils.Logging;
 
 namespace S3ToolKit.Utils
 {
     public class IniFile
     {
+        private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.ToString());
+
         public string FileName { get; private set; }
 
         public Dictionary<string, Dictionary<string, string>> Entries { get; private set; }
 
         public IniFile(string FileName)
-        {
+        {            
             this.FileName = FileName;
             Entries = new Dictionary<string, Dictionary<string, string>>();
+
+            // make sure that the ini file's directory exists
+            Directory.CreateDirectory(Path.GetDirectoryName(FileName));
+
+            // make sure that the ini file exists
+            if (!File.Exists(FileName))
+            {
+                log.Info(string.Format("Creating INI file: {0}", FileName));
+                File.WriteAllText(FileName, "");
+            }
             Load();
         }
 
@@ -135,6 +148,8 @@ namespace S3ToolKit.Utils
             {
                 CurrentSection[Key] = Value;
             }
+
+            Save();  // Save changes on every settings write.  This way we don't have to implement close detection.
         }
     }
 }

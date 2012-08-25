@@ -22,33 +22,22 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-using S3ToolKit.Utils.Registry;
+using S3Launcher; 
 using System.IO;
 
-namespace S3ToolKit.Utils.Test.Registry
+namespace S3ToolKit.Utils.Test
 {
     [TestFixture]
-    public class RegistryTests 
+    public class FNVTests
     {
-
         [Test]
-        public void Alternate_Case_Locale_Code()
+        public void TestFNV64()
         {
-            InstallationInfo Info = InstallationInfo.Instance;
-
-            string result = Info.InitBaseDir("de-de");  // pass in a non-standard form locale
-            result = Path.GetFileName(result);  // get just the final path
-            Assert.AreEqual("Die Sims 3", result);
-        }
-
-        [Test]
-        public void Standard_Case_Locale_Code()
-        {
-            InstallationInfo Info = InstallationInfo.Instance;
-
-            string result = Info.InitBaseDir("fr-FR");  // pass in a non-standard form locale
-            result = Path.GetFileName(result);  // get just the final path
-            Assert.AreEqual("Les Sims 3", result);
+            UInt64 ExpectedResult = 0xFB1D3BAE83872E94;
+                                    
+            string TestPhrase = "Test Phrase";
+            UInt64 result = FNV.FNV64(TestPhrase);
+            Assert.AreEqual(ExpectedResult , result);
         }
     }
 }

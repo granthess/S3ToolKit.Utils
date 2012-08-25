@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FNVTests.cs" />
     <Compile Include="Logging\LoggingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry\RegistryTests.cs" />

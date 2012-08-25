@@ -8,6 +8,7 @@ obj
 
 # NuGet packages, each developer should download these themselves
 packages
+*.nupkg
 
 # SpecFlow generated feature.cs files
 *.feature.cs

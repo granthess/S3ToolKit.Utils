@@ -98,7 +98,7 @@ namespace S3ToolKit.Utils.Registry
                 DocumentBaseDir = InitBaseDir("en-US");
                 log.Warn("Locale Base Directory Not Found!  Using default en-US");
             }
-        }
+        } 
 
         public string InitBaseDir(string Locale)
         {

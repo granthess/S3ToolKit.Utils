@@ -11,3 +11,4 @@ Logging: provides a simple and robust application logging system -- potentially 
 Registry: provides access to the standard Sims 3 registry entries for application discovery and locale validation.
 
 Sims3: provides versions of the math classes used by TS3.  
+zzz

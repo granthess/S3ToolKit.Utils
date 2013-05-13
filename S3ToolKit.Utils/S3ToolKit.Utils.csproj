@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SharpCompress">
-      <HintPath>..\packages\sharpcompress.0.8.2\lib\net40\SharpCompress.dll</HintPath>
+      <HintPath>..\..\CCMagic\packages\sharpcompress.0.9\lib\net40\SharpCompress.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

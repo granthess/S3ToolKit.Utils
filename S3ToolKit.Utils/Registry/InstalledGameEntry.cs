@@ -59,6 +59,22 @@ namespace S3ToolKit.Utils.Registry
         public bool IsGame { get { return GetIsGame(); } }
         public bool IsBaseGame { get { return GetIsBaseGame(); } }
 
+        public InstalledGameEntry()
+        {
+            this.RegistryName = "The Sims 3";
+
+            this.Country = "US";
+            this.DisplayName = "The Sims 3";
+            this.ExePath = @"C:\Program Files (x86)\Origin Games\The Sims 3\Game\Bin\TS3.exe";
+            this.InstallDir = @"C:\Program Files (x86)\Origin Games\The Sims 3";
+            this.Locale = "en-US";
+
+            this.InstallStart = 0;
+            this.ProductID = 0x3e9;
+            this.SKU = 7;
+            this.Telemetery = 0;
+        }
+
         public InstalledGameEntry(RegistryKey Key, string KeyName)
         {
             log.Debug("InstalledGameEntry .ctor");
